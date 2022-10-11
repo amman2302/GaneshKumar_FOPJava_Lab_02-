@@ -74,7 +74,7 @@ public class CashDenomination {
 		{
 			counter[high] = amountToPay / arrDenominations[high];
 			amountToPay %= arrDenominations[high];
-			return countNotes(arrDenominations, counter, 0, high, amountToPay);
+			return countNotes(arrDenominations, counter, 0, high-1, amountToPay);
 		}
 		int mid = (low+high)/2;
 		if(amountToPay <= arrDenominations[mid])
